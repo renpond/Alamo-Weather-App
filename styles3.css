@@ -1,0 +1,60 @@
+html {
+  background: url(https://www.imagesfromtexas.com/images/xl/The-Alamo-in-Sepia-1.jpg)
+    no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Playfair Display";
+  color: #fff;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+.card {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: rgba(o, o, o, o.35) 0px 5px 15px;
+  width: 75vw;
+  height: fit-content;
+  margin: 80px auto;
+  border-radius: 20px;
+  padding: 10px;
+  color: #fff;
+}
+body {
+  background-color: transparent;
+  text-align: center;
+}
+#enterCity {
+  border-radius: 30px;
+  color: #a08d8d;
+}
+.btn {
+  color: black;
+  background-color: #ffffff;
+  border-color: #a08d8d;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #ffffff;
+  background-color: #a08d8d;
+  border: 1px #ffffff;
+}
+p {
+  font-size: 20px;
+}
+.day-image {
+  width: 70%;
+}
+#curr-Temp,
+#fahr,
+#cels,
+.temp,
+.barrier {
+  font-size: 26px;
+}
+#topSearch,
+#New,
+#Los,
+#Chi,
+#Mia,
+#Use-Curr {
+  background-color: #c48f7f;
+  color: #fff;
+}

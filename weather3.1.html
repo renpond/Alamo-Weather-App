@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="styles3.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="main-contain">
+        <br />
+        <form>
+          <input placeholder="enter city name" id="enterCity" />
+          <button type="submit" class="btn btn-info" id="topSearch">
+            Search
+          </button>
+          <button type="button" class="btn btn-dark" id="Use-Curr">
+            Current
+          </button>
+        </form>
+        <br />
+        <div class="container-md">
+          <div class="row align-items-start">
+            <div class="col">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <h1 id="main"><strong></strong></h1>
+                    <p id="currentDate">Sunday 5:40 PM</p>
+                    <p>
+                      High: <span id="mainHigh"></span> °
+                      <br />
+                      Low: <span id="mainLow"> </span> °
+                      <br />
+                      Feels Like: <span id="feelsLike"></span>°
+                    </p>
+                  </div>
+                  <div class="col">
+                    <h2><span id="temp-descript"></span></h2>
+                    <span class="current-temperature" id="curr-Temp"></span>
+                    <span class="temp">
+                      <a
+                        href="#"
+                        class="celsius"
+                        id="cels"
+                        style="text-decoration: none"
+                      >
+                        °C </a
+                      ><span class="barrier"> | </span
+                      ><a
+                        href="#"
+                        class="fahrenheit"
+                        id="fahr"
+                        style="text-decoration: underline"
+                        >°F</a
+                      >
+                    </span>
+                    <p>
+                      <br />
+                      Humidity: <span id="humid"></span>%
+                      <br />
+                      Wind: <span id="wind"></span> MPH
+                    </p>
+                    <br />
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="second-contain">
+          <div class="row align-items-start">
+            <div class="col" id="day">
+              <div class="week-day">Sun</div>
+              <br />
+              <div class="day-image">
+                <img
+                  src="https://www.svgrepo.com/show/206396/sun-sunny.svg"
+                  alt
+                />
+              </div>
+              <span class="future-temp">100</span>°
+            </div>
+            <div class="col">
+              <div class="week-day">Mon</div>
+              <br />
+              <div class="day-image">
+                <img
+                  src="https://www.svgrepo.com/show/206396/sun-sunny.svg"
+                  alt
+                />
+              </div>
+              <span class="future-temp">97</span>°
+            </div>
+            <div class="col">
+              <div class="week-day">Tues</div>
+              <br />
+              <div class="day-image">
+                <img
+                  src="https://www.svgrepo.com/show/178069/cloudy-sky.svg"
+                  alt
+                />
+              </div>
+              <span class="future-temp">94</span>°
+            </div>
+            <div class="col">
+              <div class="week-day">Wed</div>
+              <br />
+              <div class="day-image">
+                <img
+                  src="https://www.svgrepo.com/show/178069/cloudy-sky.svg"
+                  alt
+                />
+              </div>
+              <span class="future-temp">95</span>°
+            </div>
+            <div class="col">
+              <div class="week-day">Thurs</div>
+              <br />
+              <div class="day-image">
+                <img
+                  src="https://www.svgrepo.com/show/178075/cloudy-sky.svg"
+                  alt
+                />
+              </div>
+              <span class="future-temp">98</span>°
+            </div>
+            <div class="col">
+              <div class="week-day">Fri</div>
+              <br />
+              <div class="day-image">
+                <img
+                  src="https://www.svgrepo.com/show/178075/cloudy-sky.svg"
+                  alt
+                />
+              </div>
+              <span class="future-temp">97</span>°
+            </div>
+            <div class="col">
+              <div class="week-day">Sat</div>
+              <br />
+              <div class="day-image">
+                <img
+                  src="https://www.svgrepo.com/show/206396/sun-sunny.svg"
+                  alt
+                />
+              </div>
+              <span class="future-temp">98</span>°
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="row align-items-start">
+          <div class="col-3" id="commCities">
+            <button type="button" class="btn btn-dark" id="New">New York</button
+            ><br />
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-dark" id="Los">
+              Los Angeles</button
+            ><br />
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-dark" id="Chi">Chicago</button
+            ><br />
+          </div>
+          <div class="col-3">
+            <button type="button" class="btn btn-dark" id="Mia">Miami</button
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>Coded By Renee Pond</footer>
+    <script src="dataTypes3.js"></script>
+  </body>
+</html>
