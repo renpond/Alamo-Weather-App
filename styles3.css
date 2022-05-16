@@ -3,12 +3,32 @@ html {
     no-repeat center center fixed;
   background-size: cover;
   font-family: "Playfair Display";
+  font-size: 20px;
   color: #fff;
   font-weight: 400;
   overflow-x: hidden;
 }
+body {
+  background-color: transparent;
+  text-align: center;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  line-height: 25px;
+}
 .card {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(28, 27, 27, 0.6);
   box-shadow: rgba(o, o, o, o.35) 0px 5px 15px;
   width: 75vw;
   height: fit-content;
@@ -16,14 +36,6 @@ html {
   border-radius: 20px;
   padding: 10px;
   color: #fff;
-}
-body {
-  background-color: transparent;
-  text-align: center;
-}
-#enterCity {
-  border-radius: 30px;
-  color: #a08d8d;
 }
 .btn {
   color: black;
@@ -36,11 +48,26 @@ body {
   background-color: #a08d8d;
   border: 1px #ffffff;
 }
-p {
-  font-size: 20px;
+.weather-temperature img {
+  margin-right: 10px;
+  height: 100px;
+  width: 94px;
+}
+.weather-temperature strong {
+  color: #fff;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+.weather-temperature .units {
+  position: relative;
 }
 .day-image {
   width: 70%;
+}
+#enterCity {
+  border-radius: 10px;
+  color: #a08d8d;
 }
 #curr-Temp,
 #fahr,
