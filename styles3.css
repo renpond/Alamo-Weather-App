@@ -61,10 +61,7 @@ p {
   color: #a08d8d;
 }
 #temp-descript,
-#fahr,
-#cel,
-.temp,
-.barrier {
+.temp {
   font-size: 26px;
 }
 #topSearch,

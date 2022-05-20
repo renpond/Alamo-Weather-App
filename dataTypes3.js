@@ -25,50 +25,6 @@ let now = new Date();
 let currentDate = document.querySelector("p");
 currentDate.innerHTML = formatDate(now);
 
-/*function displayForecast(response) {
-  let forecast = response.data.daily;
-
-  let forecastElement = document.querySelector("#forecast");
-
-  let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
-        `
-      <div class="col-2">
-        <div class="weather-forecast-date">
-        ${formatDay(forecastDay.dt)}</div>
-        <img
-          src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
-          alt=""
-          width="40"
-        />
-        <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
-            forecastDay.temp.max
-          )}° </span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
-            forecastDay.temp.min
-          )}° </span>
-        </div>
-      </div>
-  `;
-    }
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-
-function getForecast(coordinates) {
-  let apiKey = "54cb345a2c3729ba77c24984961b3eee";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
-}*/
-
 function displayWeather(response) {
   let mainElement = document.querySelector("#main");
   let currTempElement = document.querySelector("#curr-Temp");
@@ -95,8 +51,6 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -108,8 +62,8 @@ function searchCity(city) {
 
 function submitSearch(event) {
   event.preventDefault();
-  let city = document.querySelector("#enterCity");
-  searchCity(cityInputElement.value);
+  let city = document.querySelector("#enterCity").value;
+  searchCity(city);
 }
 
 function searchLocation(position) {
@@ -132,29 +86,3 @@ function getCurrentLocation(event) {
 }
 
 searchCity("San Antonio");
-
-/*function showCelciusTemp(event) {
-  event.preventDefault();
-  let currTempElement = document.querySelector("#curr-Temp");
-
-  celcius.classList.add("active");
-  fahrenheit.classList.remove("active");
-  let celciusTemp = ((fahrenheitTemp - 32) * 5) / 9;
-  currTempElement.innerHTML = Math.round(celciusTemp);
-}
-
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let currTempElement = document.querySelector("#curr-Temp");
-
-  celcius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  currTempElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-let fahrenheitTemp = null;
-
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", showCelciusTemp);
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheitTemp);*/
