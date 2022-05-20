@@ -121,7 +121,7 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-function showCelciusTemp(event) {
+/*function showCelciusTemp(event) {
   event.preventDefault();
   let currTempElement = document.querySelector("#curr-Temp");
 
@@ -151,6 +151,6 @@ let fahrenheitTemp = null;
 let celcius = document.querySelector("#celcius");
 celcius.addEventListener("click", showCelciusTemp);
 let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheitTemp);
+fahrenheit.addEventListener("click", showFahrenheitTemp);*/
 
 searchCity("San Antonio");
