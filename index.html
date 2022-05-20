@@ -17,14 +17,14 @@
   <body>
     <div class="card">
       <div class="main-contain">
-      <h1 id="city"></h1>
+      <h1 id="main"></h1>
         <form>
           <input
             placeholder="Enter city name..."
             id="enterCity"
             autocomplete="off"
           />
-          <button type="submit" class="btn btn-info" id="topSearch" onclick="submitSearch()">
+          <button type="submit" class="btn btn-info" id="topSearch">
             Search
           </button>
           <button type="button" class="btn btn-dark" id="Use-Curr">
@@ -44,8 +44,8 @@
                   <img src=""  id="icon" class="float-left"/>
                   <div class="float-left">
                   <strong id="curr-Temp"></strong>
-                    <a href="#" id="fahrenheit" class="active">°F </a>  | 
-                      <a href="#" id="celsius">°C</a ></span>
+                    <a href="#" id="fahr" class="active">°F </a>  | 
+                      <a href="#" id="cels">°C</a ></span>
                         <ul>
                         <li> Feels Like: <span id="feelsLike"></span>°</li>
                         </ul>
@@ -56,8 +56,8 @@
                     <ul>
                      <li> Humidity: <span id="humid"></span>%</li>
                       <li>Wind: <span id="wind"></span> MPH</li>
-                     <li>High: <span id="cityHigh"></span> °</li>
-                      <li>Low: <span id="cityLow"> </span> °</li>
+                     <li>High: <span id="mainHigh"></span> °</li>
+                      <li>Low: <span id="mainLow"> </span> °</li>
                     </ul>
                   </div>
                   </div>
