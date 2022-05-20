@@ -154,4 +154,4 @@ celcius.addEventListener("click", showCelciusTemp);
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemp);*/
 
-searchCity("Rome");
+searchCity("San Antonio");
