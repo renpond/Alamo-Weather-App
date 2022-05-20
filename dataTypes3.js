@@ -96,7 +96,7 @@ function displayWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  getForecast(response.data.coord);
+  //getForecast(response.data.coord);
 }
 
 function searchCity(city) {
