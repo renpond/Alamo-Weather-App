@@ -12,34 +12,25 @@ body {
   background-color: transparent;
   text-align: center;
 }
-h1 {
-  font-size: 40px;
-  font-weight: 300;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
+li,
+p {
   list-style: none;
   margin: 0;
-  padding: 0;
-  font-weight: 200;
+  padding: 5px;
+  text-transform: capitalize;
+  font-weight: 400;
   line-height: 25px;
 }
 .card {
   background-color: rgba(28, 27, 27, 0.6);
   box-shadow: rgba(o, o, o, o.35) 0px 5px 15px;
-  width: 75vw;
-  height: fit-content;
-  margin: 80px auto;
-  border-radius: 20px;
-  padding: 10px;
+  width: 75%;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 40px 40px;
   color: #fff;
 }
 .btn {
-  color: black;
-  background-color: #ffffff;
   border-color: #a08d8d;
   cursor: pointer;
 }
@@ -55,33 +46,38 @@ li {
 }
 .weather-temperature strong {
   color: #fff;
-  font-size: 64px;
+  font-size: 80px;
   line-height: 1;
   font-weight: 400;
 }
 .weather-temperature .units {
   position: relative;
 }
-.day-image {
-  width: 70%;
+.weather-forecast {
+  color: #fff;
 }
 #enterCity {
   border-radius: 10px;
   color: #a08d8d;
 }
-#curr-Temp,
+#temp-descript,
 #fahr,
-#cels,
+#cel,
 .temp,
 .barrier {
   font-size: 26px;
 }
 #topSearch,
-#New,
-#Los,
-#Chi,
-#Mia,
 #Use-Curr {
   background-color: #c48f7f;
   color: #fff;
+}
+#New,
+#Los,
+#Chi,
+#Mia {
+  background-color: #c48f7f;
+  color: #fff;
+  margin: 5px 10px;
+  padding: 5px;
 }
