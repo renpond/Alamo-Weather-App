@@ -1,4 +1,4 @@
-/*function formatDate(currentDate) {
+function formatDate(currentDate) {
   let hours = currentDate.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -25,7 +25,7 @@ let now = new Date();
 let currentDate = document.querySelector("p");
 currentDate.innerHTML = formatDate(now);
 
-function displayForecast(response) {
+/*function displayForecast(response) {
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
@@ -113,13 +113,20 @@ function submitSearch(event) {
 
 function searchLocation(position) {
   let apiKey = "54cb345a2c3729ba77c24984961b3eee";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=
+  ${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeather);
 }
 
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
+
+  let form = document.querySelector("form");
+  form.addEventListener("submit", submitSearch);
+
+  let currentLocationButton = document.querySelector("#Use-Curr");
+  currentLocationButton.addEventListener("click", getCurrentLocation);
 }
 /*function showCelciusTemp(event) {
   event.preventDefault();
@@ -140,12 +147,6 @@ function showFahrenheitTemp(event) {
   currTempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
-let form = document.querySelector("form");
-form.addEventListener("submit", submitSearch);
-
-let currentLocationButton = document.querySelector("#Use-Curr");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-
 let fahrenheitTemp = null;
 
 let celcius = document.querySelector("#celcius");
@@ -153,4 +154,4 @@ celcius.addEventListener("click", showCelciusTemp);
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemp);*/
 
-//searchCity("Rome");
+searchCity("Rome");
