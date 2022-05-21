@@ -16,7 +16,8 @@
   </head>
   <body>
     <div class="card">
-      <div class="main-contain">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
       <h1 id="main"></h1>
         <form>
           <input
@@ -33,26 +34,27 @@
         </form>
         <br/>
         <div class="overview">
-                    <p id="currentDate">Sunday 5:40 PM</p>
-                    <ul>
-                      <li><span id="temp-descript"></span></li>
-                      </ul>
+                    <p id="currentDate"></p>
                   </div>
+                  <br/>
                   <div class="row">
-                    <div class="col-6">
-                  <div class="clearfix weather-temperature">
+                    <div class="col">
+                  <div class="clearfix weather-temp">
                   <img src=""  id="icon" class="float-left"/>
                   <div class="float-left">
-                  <strong id="curr-Temp"></strong>
-                    <a href="#" id="fahr" class="active">°F </a>  | 
-                      <a href="#" id="cels">°C</a ></span>
+                  <strong id="currentTemp"></strong>
+                  <span class="units">
+                    <a href="#" id="fahr" class="active"> °F  |<a href="#" id="celsius"> °C </a >
+                    </span>
+                    <br/>
                         <ul>
+                          <li><span id="temp-descript"></span></li>
                         <li> Feels Like: <span id="feelsLike"></span>°</li>
                         </ul>
                     </div>
                     </div>
                     </div>
-                  <div class="col-6">
+                  <div class="col">
                     <ul>
                      <li> Humidity: <span id="humid"></span>%</li>
                       <li>Wind: <span id="wind"></span> MPH</li>
@@ -60,33 +62,35 @@
                       <li>Low: <span id="mainLow"> </span> °</li>
                     </ul>
                   </div>
+                    <br/>
+                    <hr/>
+                  </div>
+                    <div class="weather-forecast" id="forecast">
+                       <div class="row">
+                      <div class="col">
+                    </div>
+                  </div>
+                  </div>
+                  </div>
                   </div>
                 </div>
               </div>
               </div>
             </div>
           </div>
-        </div>
-            <div class="weather-forecast" id="forecast"></div>
-        <br />
-        <br />
         <div class="row align-items-start">
           <div class="col-3">
-            <button type="button" class="btn btn-dark" id="New">New York</button
-            ><br />
+            <button type="button" class="btn btn-dark" id="New">New York</button>
           </div>
           <div class="col-3">
             <button type="button" class="btn btn-dark" id="Los">
-              Los Angeles</button
-            ><br />
+              Los Angeles</button>
           </div>
           <div class="col-3">
-            <button type="button" class="btn btn-dark" id="Chi">Chicago</button
-            ><br />
+            <button type="button" class="btn btn-dark" id="Chi">Chicago</button >
           </div>
           <div class="col-3">
-            <button type="button" class="btn btn-dark" id="Mia">Miami</button
-            ><br />
+            <button type="button" class="btn btn-dark" id="Mia">Miami</button >
           </div>
         </div>
       </div>

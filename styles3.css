@@ -22,8 +22,7 @@ p {
   line-height: 25px;
 }
 .card {
-  background-color: rgba(28, 27, 27, 0.6);
-  box-shadow: rgba(o, o, o, o.35) 0px 5px 15px;
+  background-color: rgba(60, 59, 59, 0.6);
   width: 75%;
   margin: 50px auto;
   border-radius: 10px;
@@ -39,29 +38,28 @@ p {
   background-color: #a08d8d;
   border: 1px #ffffff;
 }
-.weather-temperature img {
-  margin-right: 10px;
+.weather-temp img {
   height: 100px;
-  width: 94px;
+  width: 100px;
 }
-.weather-temperature strong {
+.weather-temp strong {
   color: #fff;
-  font-size: 80px;
+  font-size: 50px;
   line-height: 1;
   font-weight: 400;
 }
-.weather-temperature .units {
+.weather-temp .units {
   position: relative;
 }
 .weather-forecast {
   color: #fff;
+  text-align: left;
 }
 #enterCity {
   border-radius: 10px;
   color: #a08d8d;
 }
-#temp-descript,
-.temp {
+#temp-descript {
   font-size: 26px;
 }
 #topSearch,
