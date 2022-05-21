@@ -12,6 +12,9 @@ body {
   background-color: transparent;
   text-align: center;
 }
+footer {
+  color: #fff;
+}
 li,
 p {
   list-style: none;
