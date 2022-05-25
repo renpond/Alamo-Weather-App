@@ -3,7 +3,6 @@ html {
     no-repeat center center fixed;
   background-size: cover;
   font-family: "Playfair Display";
-
   overflow-x: hidden;
 }
 body {
@@ -28,9 +27,9 @@ p {
 .card {
   background-color: rgba(60, 59, 59, 0.6);
   width: 75%;
-  margin: 50px auto;
+  margin: 40px auto;
   border-radius: 10px;
-  padding: 40px 40px;
+  padding: 30px 30px;
   color: #fff;
 }
 .btn {
