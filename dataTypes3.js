@@ -1,14 +1,14 @@
 //Day & Time Info
 function formatDate(currentDate) {
-  let hours = currentDate.getHours();
+  let hours = currentDate.getUTCHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = currentDate.getMinutes();
+  let minutes = currentDate.getUTCMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let weekDay = currentDate.getDay();
+  let weekDay = currentDate.getUTCDay();
   let days = [
     "Sunday",
     "Monday",
@@ -23,8 +23,8 @@ function formatDate(currentDate) {
   return `${day} ${hours}:${minutes} `;
 }
 let now = new Date();
-let currentDate = document.querySelector("p");
-currentDate.innerHTML = formatDate(now);
+let displayDate = document.querySelector("p");
+displayDate.innerHTML = formatDate(now);
 
 function formatDay(currentDate) {
   let date = new Date(currentDate * 1000);
@@ -65,6 +65,11 @@ function displayWeatherCondition(response) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   //document.querySelector("#icon").setAttribute("#alt", response.data.weather[0].description);
+
+  //Display New Date
+  let newTimezone = response.data.timezone * 1000;
+  let currDate = new Date(Date.now() + newTimezone);
+  document.querySelector("p").innerHTML = formatDate(currDate);
 
   getForecast(response.data.coord);
 }
